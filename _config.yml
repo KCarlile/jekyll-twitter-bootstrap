@@ -1,0 +1,62 @@
+title: Jekyll Twitter Bootstrap (Site Title)
+author:
+  name: Your Name
+  email: your-email@domain.com
+
+# The `>` after `description:` means to ignore line-breaks until next key.
+# If you want to omit the line-break after the end of text, use `>-` instead.
+description: >
+  Jekyll Twitter Bootstrap is a Jekyll theme based on Twitter Bootstrap for
+  easy customization by leveraging the Bootstrap framework for styling and
+  layout.
+
+# Build settings
+theme: jekyll-twitter-bootstrap
+# Used to show excerpt/first paragraph for blog posts in listing.
+show_excerpts: true
+# Used in posts for explicitly delimiting excerpt.
+excerpt_separator: <!--more-->
+# Explicitly turn off the old code
+paginate: 10
+paginate_path: "/blog/:num"
+# Define the post permalink format.
+permalink: /blog/:year/:month/:day/:title:output_ext
+# Default front matter for content types.
+defaults:
+  # Posts should default to layout=post and sidebar=categories,tags.
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      sidebar:
+        - categories
+        - tags
+
+# Add pages here to explicitly appear in this order in your navigation.
+header_pages:
+  - index.md
+  - examples.md
+  - blog/index.html
+
+# Specify directories or files to exclude from the build.
+exclude:
+  - jekyll-twitter-bootstrap.gemspec
+  - LICENSE.txt
+  - README.md
+  - server
+
+plugins:
+  - jekyll-paginate
+
+# Theme-specific settings
+jekyll-twitter-bootstrap:
+  # Starting year for copyright in footer.
+  # If empty, the current year only is used.
+  # If populated, the year specified is prepended to the current year with a
+  # hyphen to indicate a range.
+  copyright_year_start: 2022
+  # Date format used by the site. See https://strftime.net/ for syntax.
+  # The default is: '%B %e, %Y at %l:%M%p'
+  date_format: 

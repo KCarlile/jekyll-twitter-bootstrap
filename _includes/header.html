@@ -1,0 +1,26 @@
+{%- assign default_paths = site.pages | map: "path" -%}
+{%- assign page_paths = site.header_pages | default: default_paths -%}
+{%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="{{ "/" | relative_url }}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="/assets/svg/bootstrap.svg#bootstrap"/></svg>
+        <span class="fs-4">{{ site.title | escape }}</span>
+    </a>
+    {%- if titles_size > 0 -%}
+        <ul class="nav nav-pills">
+            {%- for path in page_paths -%}
+                {%- assign this_page = site.pages | where: "path", path | first -%}
+                {%- if this_page.title -%}
+                    {%- if this_page.url == page.url -%}
+                        {% assign class = 'active' %}
+                        {% assign aria = 'aria-current="page"' %}
+                    {%- endif -%}
+                    <li class="nav-item"><a href="{{ this_page.url | relative_url }}" class="nav-link {{ class }}" {{ aria }}>{{ this_page.title | escape }}</a></li>
+                    {% assign class = nil %}
+                    {% assign aria = nil %}
+                {%- endif -%}
+            {%- endfor -%}
+        </ul>
+    {%- endif -%}
+    {% include header_custom.html %}
+</header>

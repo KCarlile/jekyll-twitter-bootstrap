@@ -1,0 +1,24 @@
+---
+layout: base
+---
+
+{%- if page.title -%}
+    <h1 class="pb-4 mb-4 fst-italic">{{ page.title }}</h1>
+{%- endif -%}
+<div class="row g-5">
+    <!-- BEGIN Main blog content -->
+    <div class="col-md-8">
+        {{ content }}
+    </div>
+    <!-- END Main blog content -->
+    <!-- BEGIN sidebar -->
+    <div class="col-md-4">
+        {%- if page.sidebar -%}
+            {% for include in page.sidebar %}
+                {% assign include_file = include | append: ".html" %}
+                {% include {{include_file}} %}
+            {% endfor %}
+        {%- endif -%}
+    </div>
+    <!-- END sidebar -->
+</div>

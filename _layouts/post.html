@@ -1,0 +1,41 @@
+---
+layout: page_sidebar
+---
+
+{%- assign date_format = site.jekyll-twitter-bootstrap.date_format | default: "%B %e, %Y at %l:%M%p" -%}
+<article class="blog-post mb-5" itemscope itemtype="http://schema.org/BlogPosting">
+    {% comment %}<h2 class="blog-post-title mb-1" itemprop="name headline">{{ page.title | escape }}</h2>{% endcomment %}
+    <p class="blog-post-meta">
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}"
+            itemprop="datePublished">{{ page.date | date: date_format }}</time> by 
+        {%- if page.author -%}
+            {% for author in page.author %}
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+                {%- if forloop.last == false %}, {% endif -%}
+            {% endfor %}
+        {%- endif -%}
+        {%- if page.categories or page.category -%}
+            <span class="blog-category-spacer mx-2">|</span>
+        {%- endif -%}
+        {%- if page.categories -%}
+            {% for category in page.categories %}
+                <a href="/categories/#{{ category | slugify }}">{{ category }}</a>
+                {%- if forloop.last == false %}, {% endif -%}
+            {% endfor %}
+        {%- elsif page.category -%}
+            <a href="/categories/#{{ page.category | slugify }}">{{ page.category }}</a>
+        {%- endif -%}
+    </p>
+    <div itemprop="articleBody">
+        {{ content }}
+    </div>
+    <div itemprop="keywords">
+        {%- if page.tags -%}
+            {% for tag in page.tags %}
+                <a href="/tags/#{{ tag | slugify }}">{{ tag }}</a>
+                {%- if forloop.last == false %}, {% endif -%}
+            {% endfor %}
+        {%- endif -%}
+    </div>
+</article>

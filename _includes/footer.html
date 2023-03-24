@@ -1,0 +1,29 @@
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    {% include footer_custom.html %}
+    <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+        </a>
+        {%- assign copyright_year = 'now' | date: "%Y" -%}
+        {%- if site.jekyll-twitter-bootstrap.copyright_year_start -%}
+            {%- assign copyright_year = site.jekyll-twitter-bootstrap.copyright_year_start | append: "-" | append: copyright_year -%}
+        {%- endif -%}
+        <span class="mb-3 mb-md-0 text-muted">&copy; {{ copyright_year }} {{ site.title | escape }}</span>
+    </div>
+    {%- if titles_size > 0 -%}
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            {%- for path in page_paths -%}
+                {%- assign this_page = site.pages | where: "path", path | first -%}
+                {%- if this_page.title -%}
+                    {%- if this_page.url == page.url -%}
+                        {% assign class = 'text-decoration-underline' %}
+                        {% assign aria = 'aria-current="page"' %}
+                    {%- endif -%}
+                    <li class="nav-item"><a href="{{ this_page.url | relative_url }}" class="nav-link px-2 text-muted {{ class }}" {{ aria }}>{{ this_page.title | escape }}</a></li>
+                    {% assign class = nil %}
+                    {% assign aria = nil %}
+                {%- endif -%}
+            {%- endfor -%}
+        </ul>
+    {%- endif -%}
+</footer>
