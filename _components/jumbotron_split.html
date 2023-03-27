@@ -1,0 +1,46 @@
+{%- if include.left_style_dark != false -%}
+    {% assign left_div_style = "text-bg-dark" %}
+    {% assign left_button_style = "btn-outline-light" %}
+{%- else -%}
+    {% assign left_div_style = "bg-light border" %}
+    {% assign left_button_style = "btn-outline-secondary" %}
+{%- endif -%}
+
+{%- if include.right_style_dark != false -%}
+    {% assign right_div_style = "text-bg-dark" %}
+    {% assign right_button_style = "btn-outline-light" %}
+{%- else -%}
+    {% assign right_div_style = "bg-light border" %}
+    {% assign right_button_style = "btn-outline-secondary" %}
+{%- endif -%}
+
+<!-- BEGIN Jumbotron Split -->
+<div class="row align-items-md-stretch jumbotron-split">
+    <div class="col-md-6">
+        <div class="h-100 p-5 rounded-3 {{ left_div_style }}">
+            {%- if include.left_title -%}
+                <h2>{{ include.left_title }}</h2>
+            {%- endif -%}
+            {%- if include.left_body -%}
+                <div class="mb-3">{{ include.left_body }}</div>
+            {%- endif -%}
+            {%- if include.left_link_text -%}
+                <button class="btn {{ left_button_style }}" type="button" onclick="window.location.href='{{ include.left_link_url }}';">{{ include.left_link_text }}</button>
+            {%- endif -%}
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="h-100 p-5 rounded-3 {{ right_div_style }}">
+            {%- if include.right_title -%}
+                <h2>{{ include.right_title }}</h2>
+            {%- endif -%}
+            {%- if include.right_body -%}
+                <div class="mb-3">{{ include.right_body }}</div>
+            {%- endif -%}
+            {%- if include.right_link_text -%}
+                <button class="btn {{ right_button_style }}" type="button" onclick="window.location.href='{{ include.right_link_url }}';">{{ include.right_link_text }}</button>
+            {%- endif -%}
+        </div>
+    </div>
+</div>
+<!-- END Jumbotron Split -->

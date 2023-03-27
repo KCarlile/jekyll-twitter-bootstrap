@@ -1,0 +1,52 @@
+{%- if include.card_title_align == "Center" -%}
+    {% assign col_title_align_class = "text-center" %}
+    {% assign col_link_align_class = "mx-auto" %}
+{%- else -%}
+    {% assign class_align = "" %}
+    {% assign col_link_align_class = "me-auto" %}
+{%- endif -%}
+<!-- BEGIN Custom cards -->
+<div class="container px-4 py-5 columns-image-cards">
+    {%- if include.title -%}
+        <h2 class="pb-2 border-bottom">{{ include.title }}</h2>
+    {%- endif -%}
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        {%- if !include.col1_title -%}
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('{{ include.col1_bgimg_path }}');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 {{ col_title_align_class }}">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ include.col1_title }}</h3>
+                        {%- if !include.col1_link_text -%}
+                            <a href="{{ include.col1_link_url }}" class="btn btn-secondary {{ col_link_align_class }}">{{ include.col1_link_text }}</a>
+                        {%- endif -%}
+                    </div>
+                </div>
+            </div>
+        {%- endif -%}
+        {%- if !include.col2_title -%}
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('{{ include.col2_bgimg_path }}');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 {{ col_title_align_class }}">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ include.col2_title }}</h3>
+                        {%- if !include.col2_link_text -%}
+                            <a href="{{ include.col2_link_url }}" class="btn btn-secondary {{ col_link_align_class }}">{{ include.col2_link_text }}</a>
+                        {%- endif -%}
+                    </div>
+                </div>
+            </div>
+        {%- endif -%}
+        {%- if !include.col3_title -%}
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('{{ include.col3_bgimg_path }}');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 {{ col_title_align_class }}">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ include.col3_title }}</h3>
+                        {%- if !include.col3_link_text -%}
+                            <a href="{{ include.col3_link_url }}" class="btn btn-secondary {{ col_link_align_class }}">{{ include.col3_link_text }}</a>
+                        {%- endif -%}
+                    </div>
+                </div>
+            </div>
+        {%- endif -%}
+    </div>
+</div>
+<!-- END Custom cards -->

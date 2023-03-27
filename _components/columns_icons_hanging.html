@@ -1,0 +1,51 @@
+<!-- BEGIN Hanging icons -->
+<div class="container px-4 py-5 component-columns-icons-hanging">
+    {%- if include.title -%}
+        <h2 class="pb-2 border-bottom">{{ include.title }}</h2>
+    {%- endif -%}
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        {%- if !include.col1_title -%}
+            <div class="col d-flex align-items-start">
+                <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="{{ include.col1_icon_path }}"/></svg>
+                </div>
+                <div>
+                    <h3 class="fs-2">{{ include.col1_title }}</h3>
+                    <div class="mb-3">{{ include.col1_body }}</div>
+                    {%- if !include.col1_link_text -%}
+                        <a href="{{ include.col1_link_url}}" class="btn btn-primary">{{ include.col1_link_text }}</a>
+                    {%- endif -%}
+                </div>
+            </div>
+        {%- endif -%}
+        {%- if !include.col2_title -%}
+            <div class="col d-flex align-items-start">
+                <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="{{ include.col2_icon_path }}"/></svg>
+                </div>
+                <div>
+                    <h3 class="fs-2">{{ include.col2_title }}</h3>
+                    <div class="mb-3">{{ include.col2_body }}</div>
+                    {%- if !include.col2_link_text -%}
+                        <a href="{{ include.col2_link_url}}" class="btn btn-primary">{{ include.col2_link_text }}</a>
+                    {%- endif -%}
+                </div>
+            </div>
+        {%- endif -%}
+        {%- if !include.col1_title -%}
+            <div class="col d-flex align-items-start">
+                <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="{{ include.col3_icon_path }}"/></svg>
+                </div>
+                <div>
+                    <h3 class="fs-2">{{ include.col3_title }}</h3>
+                    <div class="mb-3">{{ include.col3_body }}</div>
+                    {%- if !include.col3_link_text -%}
+                        <a href="{{ include.col3_link_url}}" class="btn btn-primary">{{ include.col3_link_text }}</a>
+                    {%- endif -%}
+                </div>
+            </div>
+        {%- endif -%}
+    </div>
+</div>
+<!-- END Hanging icons -->

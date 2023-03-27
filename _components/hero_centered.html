@@ -1,18 +1,18 @@
-<!-- BEGIN Centered Hero -->
-<div class="px-4 py-5 my-5 text-center">
+<!-- BEGIN Hero Centered -->
+<div class="px-4 py-5 my-5 text-center component-hero-centered">
     <h1 class="display-5 fw-bold">{{ include.title }}</h1>
     <div class="col-lg-6 mx-auto">
         <p class="lead mb-4">{{ include.body }}</p>
-        {%- if include.primary_button_text or include.secondary_button_text -%}
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            {%- if include.primary_button_text -%}
-                <button type="button" class="btn btn-primary btn-lg px-4 gap-3" onclick="window.location.href='{{ include.primary_button_url }}';">{{ include.primary_button_text }}</button>
+            {%- if include.primary_link_text or include.secondary_link_text -%}
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    {%- if include.primary_link_text -%}
+                        <button type="button" class="btn btn-primary btn-lg px-4 gap-3" onclick="window.location.href='{{ include.primary_link_url }}';">{{ include.primary_link_text }}</button>
+                    {%- endif -%}
+                    {%- if include.secondary_link_text -%}
+                        <button type="button" class="btn btn-outline-secondary btn-lg px-4" onclick="window.location.href='{{ include.secondary_link_url }}';">{{ include.secondary_link_text }}</button>
+                    {%- endif -%}
+                </div>
             {%- endif -%}
-            {%- if include.secondary_button_text -%}
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4" onclick="window.location.href='{{ include.secondary_button_url }}';">{{ include.secondary_button_text }}</button>
-            {%- endif -%}
-        </div>
-        {%- endif -%}
     </div>
 </div>
-<!-- END Centered Hero -->
+<!-- BEGIN Hero Centered -->

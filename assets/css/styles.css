@@ -166,6 +166,10 @@
 }
 
 @media (min-width: 62em) {
+    .featurette {
+        height: 500px;
+    }
+    
     .featurette-heading {
         margin-top: 7rem;
     }

@@ -1,0 +1,21 @@
+<!-- BEGIN Featurette Right -->
+<div class="row featurette featurette-right">
+    <div class="col-md-7 order-md-2">
+        {%- if include.title -%}
+            <h2 class="featurette-heading fw-normal lh-1">{{ include.title }}
+                {%- if include.tagline -%}
+                    <span class="text-muted ms-3">{{ include.tagline }}</span>
+                {%- endif -%}
+            </h2>
+        {%- endif -%}
+        {%- if include.body -%}
+            <p class="lead">{{ include.body }}</p>
+        {%- endif -%}
+    </div>
+    <div class="col-md-5 order-md-1">
+        {%- if include.image_path -%}
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="{{ include.image_path }}" alt="{{ include.image_text }}" />
+        {%- endif -%}
+    </div>
+</div>
+<!-- END Featurette Right -->

@@ -1,0 +1,97 @@
+<!-- BEGIN Columns Icons Grid -->
+<div class="container px-4 py-5 columns-icon-grid">
+    {%- if include.title -%}
+        <h2 class="pb-2 border-bottom">Icon grid</h2>
+    {%- endif -%}
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 pt-5">
+        {%- if include.item1_title -%}
+            <div class="col d-flex align-items-start">
+                {%- if item1_icon_path -%}
+                    <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="{{ item1_icon_path }}"/></svg>
+                {%- endif -%}
+                <div>
+                    <h3 class="fw-bold mb-0 fs-4">{{ item1_title }}</h3>
+                    <div class="mb-3">{{ item1_body }}</div>
+                </div>
+            </div>
+        {%- endif -%}
+        {%- if include.item2_title -%}
+            <div class="col d-flex align-items-start">
+                {%- if item2_icon_path -%}
+                    <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="{{ item2_icon_path }}"/></svg>
+                {%- endif -%}
+                <div>
+                    <h3 class="fw-bold mb-0 fs-4">{{ item2_title }}</h3>
+                    <p>{{ item2_body }}</p>
+                </div>
+            </div>
+        {%- endif -%}
+        {%- if include.item3_title -%}
+            <div class="col d-flex align-items-start">
+                {%- if item3_icon_path -%}
+                    <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="{{ item3_icon_path }}"/></svg>
+                {%- endif -%}
+                <div>
+                    <h3 class="fw-bold mb-0 fs-4">{{ item3_title }}</h3>
+                    <p>{{ item3_body }}</p>
+                </div>
+            </div>
+        {%- endif -%}
+        {%- if include.item4_title -%}
+            <div class="col d-flex align-items-start">
+                {%- if item4_icon_path -%}
+                    <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="{{ item4_icon_path }}"/></svg>
+                {%- endif -%}
+                <div>
+                    <h3 class="fw-bold mb-0 fs-4">{{ item4_title }}</h3>
+                    <p>{{ item4_body }}</p>
+                </div>
+            </div>
+        {%- endif -%}
+        {%- if include.item5_title -%}
+            <div class="col d-flex align-items-start">
+                {%- if item5_icon_path -%}
+                    <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="{{ item5_icon_path }}"/></svg>
+                {%- endif -%}
+                <div>
+                    <h3 class="fw-bold mb-0 fs-4">{{ item5_title }}</h3>
+                    <p>{{ item5_body }}</p>
+                </div>
+            </div>
+        {%- endif -%}
+        {%- if include.item6_title -%}
+            <div class="col d-flex align-items-start">
+                {%- if item6_icon_path -%}
+                    <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="{{ item6_icon_path }}"/></svg>
+                {%- endif -%}
+                <div>
+                    <h3 class="fw-bold mb-0 fs-4">{{ item6_title }}</h3>
+                    <p>{{ item6_body }}</p>
+                </div>
+            </div>
+        {%- endif -%}
+        {%- if include.item7_title -%}
+            <div class="col d-flex align-items-start">
+                {%- if item7_icon_path -%}
+                    <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="{{ item7_icon_path }}"/></svg>
+                {%- endif -%}
+                <div>
+                    <h3 class="fw-bold mb-0 fs-4">{{ item7_title }}</h3>
+                    <p>{{ item7_body }}</p>
+                </div>
+            </div>
+        {%- endif -%}
+        {%- if include.item8_title -%}
+            <div class="col d-flex align-items-start">
+                {%- if item8_icon_path -%}
+                    <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="{{ item8_icon_path }}"/></svg>
+                {%- endif -%}
+                <div>
+                    <h3 class="fw-bold mb-0 fs-4">{{ item8_title }}</h3>
+                    <p>{{ item8_body }}</p>
+                </div>
+            </div>
+        {%- endif -%}
+    </div>
+</div>
+<!-- END Columns Icons Grid -->
