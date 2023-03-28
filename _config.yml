@@ -1,3 +1,6 @@
+# ------------------------------------------------------------
+# Standard Theme Configuration
+# ------------------------------------------------------------
 title: Jekyll Twitter Bootstrap (Site Title)
 author:
   name: Your Name
@@ -37,7 +40,7 @@ defaults:
 # Add pages here to explicitly appear in this order in your navigation.
 header_pages:
   - index.md
-  - examples.md
+  - component-examples.md
   - blog/index.html
 
 # Specify directories or files to exclude from the build.
@@ -50,13 +53,19 @@ exclude:
 plugins:
   - jekyll-paginate
 
-# Theme-specific settings
+# ------------------------------------------------------------
+# Jekyll Twitter Bootstrap Theme-Specific Configuration
+# ------------------------------------------------------------
 jekyll-twitter-bootstrap:
   # Starting year for copyright in footer.
-  # If empty, the current year only is used.
+  # If empty, the current year only is used (e.g. 2023).
   # If populated, the year specified is prepended to the current year with a
-  # hyphen to indicate a range.
+  # hyphen to indicate a range (e.g. 2022-2023).
   copyright_year_start: 2022
   # Date format used by the site. See https://strftime.net/ for syntax.
-  # The default is: '%B %e, %Y at %l:%M%p'
+  # The default (empty value) is: '%B %e, %Y at %l:%M%p'
   date_format: 
+  # HTML to override the defaults for header and footer logos.
+  logo:
+    header: <svg class="bi me-2" width="40" height="32"><use xlink:href="/assets/svg/bootstrap.svg#bootstrap"/></svg>
+    footer: <svg class="bi" width="30" height="24"><use xlink:href="/assets/svg/bootstrap-icons.svg#bootstrap"/></svg>

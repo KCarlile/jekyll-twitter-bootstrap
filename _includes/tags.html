@@ -1,4 +1,4 @@
-<!-- BEGIN tags -->
+<!-- BEGIN tags listing -->
 {% capture tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tags_list = tags | split:',' | sort_natural %}    
 <h3>Tags</h3>
@@ -13,4 +13,4 @@
         {% endunless %}
     {% endfor %}
 </ul>
-<!-- END tags -->
+<!-- END tags listing -->

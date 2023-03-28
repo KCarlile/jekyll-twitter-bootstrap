@@ -1,6 +1,12 @@
 ---
-title: Examples
-layout: examples
+title: Component Examples
+layout: page
+---
+
+This page includes examples for how to call the provided components based on [some of the provided examples from Twitter Bootstrap](https://getbootstrap.com/docs/5.3/examples/).
+
+See the theme's `component-examples.md` file for the underlying code. The components referenced are located in the `_components/` directory.
+
 ---
 
 <!-- BEGIN Hero Centered -->
@@ -356,6 +362,62 @@ This shows how one of the side-by-side half-jumbotron panels can be styled light
     right_link_url=right_link_url
 %}
 <!-- END Jumbotron Split -->
+<hr />
+<!-- BEGIN Carousel -->
+{% assign carousel_id = "carousel-component" %}
+
+{% assign slide1_alignment = "Left" %}
+{% assign slide1_title = "Example headline." %}
+{% capture slide1_tagline %}
+Some representative placeholder content for the first slide of the carousel.
+{% endcapture %}
+{% assign slide1_link_text = "Sign Up Today" %}
+{% assign slide1_link_url = "/" %}
+{% assign slide1_image_path = "/assets/svg/placeholder-full-gray.svg" %}
+
+{% assign slide2_alignment = "" %}
+{% assign slide2_title = "Another example headline." %}
+{% capture slide2_tagline %}
+Some representative placeholder content for the second slide of the carousel.
+{% endcapture %}
+{% assign slide2_link_text = "Learn More" %}
+{% assign slide2_link_url = "/" %}
+{% assign slide2_image_path = "/assets/svg/placeholder-full-gray.svg" %}
+
+{% assign slide3_alignment = "Right" %}
+{% assign slide3_title = "One more for good measure." %}
+{% capture slide3_tagline %}
+Some representative placeholder content for the third slide of this carousel.
+{% endcapture %}
+{% assign slide3_link_text = "Browse Gallery" %}
+{% assign slide3_link_url = "/" %}
+{% assign slide3_image_path = "/assets/svg/placeholder-full-gray.svg" %}
+
+{% include_relative _components/carousel.html
+    carousel_id=carousel_id
+
+    slide1_alignment=slide1_alignment
+    slide1_title=slide1_title
+    slide1_tagline=slide1_tagline
+    slide1_link_text=slide1_link_text
+    slide1_link_url=slide1_link_url
+    slide1_image_path=slide1_image_path
+
+    slide2_alignment=slide2_alignment
+    slide2_title=slide2_title
+    slide2_tagline=slide2_tagline
+    slide2_link_text=slide2_link_text
+    slide2_link_url=slide2_link_url
+    slide2_image_path=slide2_image_path
+
+    slide3_alignment=slide3_alignment
+    slide3_title=slide3_title
+    slide3_tagline=slide3_tagline
+    slide3_link_text=slide3_link_text
+    slide3_link_url=slide3_link_url
+    slide3_image_path=slide3_image_path
+%}
+<!-- END Carousel -->
 <hr />
 <!-- BEGIN Featurette Left -->
 {% assign content_title = "Featurette Left." %}
