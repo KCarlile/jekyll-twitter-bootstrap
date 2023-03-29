@@ -5,6 +5,7 @@ title: Jekyll Twitter Bootstrap (Site Title)
 author:
   name: Your Name
   email: your-email@domain.com
+url: https://www.yoursite.com
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
@@ -52,6 +53,12 @@ exclude:
 
 plugins:
   - jekyll-paginate
+  - jekyll-feed
+
+# jekyll-feed plugin configuration
+# Default if not overridden: /feed.xml
+feed:
+  path: 
 
 # ------------------------------------------------------------
 # Jekyll Twitter Bootstrap Theme-Specific Configuration
@@ -66,6 +73,15 @@ jekyll-twitter-bootstrap:
   # The default (empty value) is: '%B %e, %Y at %l:%M%p'
   date_format: 
   # HTML to override the defaults for header and footer logos.
+  # This should be the full <img .../> or <svg...></svg> code
+  # for the image referenced within the site.
+  # Defaults if not overridden:
+  #   header: <svg class="bi me-2" width="40" height="32"><use xlink:href="/assets/svg/bootstrap.svg#bootstrap"/></svg>
+  #   footer: <svg class="bi" width="30" height="24"><use xlink:href="/assets/svg/bootstrap-icons.svg#bootstrap"/></svg>
   logo:
-    header: <svg class="bi me-2" width="40" height="32"><use xlink:href="/assets/svg/bootstrap.svg#bootstrap"/></svg>
-    footer: <svg class="bi" width="30" height="24"><use xlink:href="/assets/svg/bootstrap-icons.svg#bootstrap"/></svg>
+    header: 
+    footer: 
+# To enable Google Analytics (GA) tracking, provide your GA tracking ID below.
+# To disable GA tracking for a particular page, add the following to the
+# page's front matter: ga_do_not_track: true
+google_analytics_tracking_id: 

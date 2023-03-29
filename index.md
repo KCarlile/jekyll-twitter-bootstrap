@@ -28,6 +28,7 @@ The following includes are available in the `_includes/` directory:
 - `footer.html`: Displays the logo, copyright, and bottom navigation.
   - `footer_custom.html`: Empty file used for adding custom content to the end of the footer.
 - `head.html`: Includes the meta information in the head of the base page.
+  - `google_analytics.html`: Includes the Google Analytics (GA) code, which is visible _if_ the GA tracking ID is provided in `_config.yml` _and_ if the page being rendered does not have the following front matter value: `ga_do_not_track: true`
   - `head_custom.html`: Empty file used for adding custom content to the end of the head.
 - `header.html`: Displays the header image and top navigation.
   - `header_custom.html`: Empty file used for adding custom content to the end of the header.
@@ -71,3 +72,8 @@ The theme's `_config.yml` file contains typical Jekyll theme configuration value
 
 - [Ruby Gems page for Jekyll Twitter Bootstrap theme](https://rubygems.org/gems/jekyll-twitter-bootstrap)
 - [GitHub page for Jekyll Twitter Bootstrap theme](https://github.com/KCarlile/jekyll-twitter-bootstrap)
+
+#### Dependencies
+
+- [Jekyll Paginate](https://github.com/jekyll/jekyll-paginate): Default pagination generator for Jekyll.
+- [Jekyll Feed](https://github.com/jekyll/jekyll-feed): A Jekyll plugin to generate an Atom (RSS-like) feed of your Jekyll posts.
