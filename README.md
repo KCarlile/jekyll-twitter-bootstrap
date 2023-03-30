@@ -67,6 +67,7 @@ The following layouts are available in the `_layouts/` directory (indentation de
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`post.html` | Single post listing which includes Categories and Tags sidebar includes. (Layout `page_sidebar.html`) |
 | &nbsp;&nbsp;&nbsp;&nbsp;`page.html` | Basic page content with rendered title and body only. (Layout `base.html`) |
 | &nbsp;&nbsp;&nbsp;&nbsp;`page_no_title.html` | Basic page content with rendered body only. (Layout `base.html`) |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`home.html` | Simply a wrapper for `page_no_title.html` layout as Jekyll's default pages use the `layout: home`. (Layout `page_no_title.html`) |
 
 ### Includes
 
@@ -88,9 +89,9 @@ The following includes are available in the `_includes/` directory (indentation 
 
 ### Components
 
-Components are pre-built mini-templates to which you can pass values for rendering more advanced page elements. The [Component Examples](/component-examples.html) page shows these and you can discover how to call them in the `component-examples.md` file. The following components are based on the [Twitter Bootstrap examples](https://getbootstrap.com/docs/5.3/examples/) and are available in the `_components/` directory:
+Components are pre-built mini-templates to which you can pass values for rendering more advanced page elements. The [Component Examples](/component-examples.html) page shows these and you can discover how to call them in the `component-examples.md` file. The following components are based on the [Twitter Bootstrap examples](https://getbootstrap.com/docs/5.3/examples/) and are available in the `_includes/_components/` directory:
 
-| `_components/` Filename | Description |
+| `_includes/_components/` Filename | Description |
 | ----------------------- | ----------- |
 | `carousel.html` | Provides three rotating slides with title, body, and linkable button for each. |
 | `columns_icons.html` | Displays up to three icons, titles, bodies, and clickable links in three-column layout. |
