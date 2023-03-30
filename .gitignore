@@ -1,6 +1,17 @@
-*.gem
-.bundle
+# Jekyll files
+_site
 .jekyll-cache
 .sass-cache
-_site
+
+# Bundler files
+.bundle
 Gemfile.lock
+
+# Gem files
+*.gem
+
+# OS files
+DS_Store
+.DS_Store?
+.Trashes
+Thumbs.db
