@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: page_no_title
+layout: home
 ---
 
 <div class="alert alert-danger" role="alert">
