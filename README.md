@@ -8,7 +8,7 @@ Jekyll Twitter Bootstrap is a Jekyll theme based on [Twitter's Bootstrap framewo
 - Theme Version: 5.3.0.dev
 - Links:
   - [GitHub page for Jekyll Twitter Bootstrap theme](https://github.com/KCarlile/jekyll-twitter-bootstrap)
-  - [Ruby Gems page for Jekyll Twitter Bootstrap theme](https://rubygems.org/gems/jekyll-twitter-bootstrap)
+  - [Ruby Gems page for Jekyll Twitter Bootstrap theme](https://rubygems.org/gems/jekyll-twitter-bootstrap) [![Gem Version](https://badge.fury.io/rb/jekyll-twitter-bootstrap.svg)](https://badge.fury.io/rb/jekyll-twitter-bootstrap)
 - Dependencies:
   - [Twitter Bootstrap 5.3.0](https://getbootstrap.com/docs/5.3/)
   - [Jekyll Paginate](https://github.com/jekyll/jekyll-paginate): Default pagination generator for Jekyll.
