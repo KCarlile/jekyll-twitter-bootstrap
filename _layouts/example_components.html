@@ -1,0 +1,471 @@
+---
+layout: page_no_title
+---
+
+{{ content }}
+
+<hr />
+<h2>Component Examples</h2>
+<p>This page includes examples for how to call the provided components based on
+    <a href="https://getbootstrap.com/docs/5.3/examples/">some of the provided
+    examples from Twitter Bootstrap</a>.</p>
+<p>The components referenced are located in the
+    <code class="language-plaintext highlighter-rouge">_includes/_components/</code>
+    directory. The content you are seeing below is coming from
+    <code class="language-plaintext highlighter-rouge">_layouts/example_components.html</code>
+    because this page has <code class="language-plaintext highlighter-rouge">layout: example_components</code>
+    in its front matter.</p>
+<hr />
+<!-- BEGIN Hero Centered -->
+{% assign content_title = "Centered Hero" %}
+{% capture content_body %}
+Quickly design and customize responsive mobile-first sites with Bootstrap, the world's most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
+{% endcapture %}
+
+{% assign primary_link_text = "Primary Button" %}
+{% assign primary_link_url = "/" %}
+
+{% assign secondary_link_text = "Secondary Button" %}
+{% assign secondary_link_url = "/blog" %}
+
+{% include_relative _includes/_components/hero_centered.html
+    title=content_title
+    body=content_body
+
+    primary_link_text=primary_link_text
+    primary_link_url=primary_link_url
+
+    secondary_link_text=secondary_link_text
+    secondary_link_url=secondary_link_url
+%}
+<!-- END Hero Centered -->
+<hr />
+<!-- BEGIN Hero Centered Dark -->
+{% assign content_title = "Centered Hero Dark" %}
+{% capture content_body %}
+Quickly design and customize responsive mobile-first sites with Bootstrap, the world's most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
+{% endcapture %}
+
+{% assign primary_link_text = "Custom Button" %}
+{% assign primary_link_url = "/" %}
+
+{% assign secondary_link_text = "Secondary Button" %}
+{% assign secondary_link_url = "/blog" %}
+
+{% include_relative _includes/_components/hero_centered_dark.html
+    title=content_title
+    body=content_body
+
+    primary_link_text=primary_link_text
+    primary_link_url=primary_link_url
+
+    secondary_link_text=secondary_link_text
+    secondary_link_url=secondary_link_url
+%}
+<!-- BEGIN Hero Centered Dark -->
+<hr />
+<!-- BEGIN Hero Image Right -->
+{% assign content_title = "Hero Image Right" %}
+{% capture content_body %}
+Quickly design and customize responsive mobile-first sites with Bootstrap, the world's most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
+{% endcapture %}
+{% assign image_path = "/assets/images/bootstrap-themes.png" %}
+{% assign image_text = "Bootstrap Themes" %}
+
+{% assign primary_link_text = "Primary" %}
+{% assign primary_link_url = "/" %}
+
+{% assign secondary_link_text = "Default" %}
+{% assign secondary_link_url = "/blog" %}
+
+{% include_relative _includes/_components/hero_image_right.html
+    title=content_title
+    body=content_body
+    image_path=image_path
+    image_text=image_text
+
+    primary_link_text=primary_link_text
+    primary_link_url=primary_link_url
+
+    secondary_link_text=secondary_link_text    
+    secondary_link_url=secondary_link_url
+%}
+<!-- END Hero Image Right -->
+<hr />
+<!-- BEGIN Columns Icons -->
+{% assign content_title = "Columns with Icons" %}
+
+{% assign col1_icon_path = "/assets/svg/bootstrap-icons.svg#collection" %}
+{% assign col1_title = "Featured title 1" %}
+{% capture col1_body %}
+1 Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.
+{% endcapture %}
+{% assign col1_link_text = "Call to action 1" %}
+{% assign col1_link_url = "/" %}
+
+{% assign col2_icon_path = "/assets/svg/bootstrap-icons.svg#people-circle" %}
+{% assign col2_title = "Featured title 2" %}
+{% capture col2_body %}
+2 Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.
+{% endcapture %}
+{% assign col2_link_text = "Call to action 2" %}
+{% assign col2_link_url = "/" %}
+
+{% assign col3_icon_path = "/assets/svg/bootstrap-icons.svg#toggles2" %}
+{% assign col3_title = "Featured title 3" %}
+{% capture col3_body %}
+3 Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.
+{% endcapture %}
+{% assign col3_link_text = "Call to action 3" %}
+{% assign col3_link_url = "/" %}
+
+{% include_relative _includes/_components/columns_icons.html
+    title=content_title
+
+    col1_icon_path=col1_icon_path
+    col1_title=col1_title
+    col1_body=col1_body
+    col1_link_text=col1_link_text
+    col1_link_url=col1_link_url
+
+    col2_icon_path=col2_icon_path
+    col2_title=col2_title
+    col2_body=col2_body
+    col2_link_text=col2_link_text
+    col2_link_url=col2_link_url
+
+    col3_icon_path=col3_icon_path
+    col3_title=col3_title
+    col3_body=col3_body
+    col3_link_text=col3_link_text
+    col3_link_url=col3_link_url
+%}
+<!-- END Columns Icons -->
+<hr />
+<!-- BEGIN Columns Icons Hanging -->
+{% assign content_title = "Columns with Icons Hanging" %}
+
+{% assign col1_icon_path = "/assets/svg/bootstrap-icons.svg#toggles2" %}
+{% assign col1_title = "Featured title 1" %}
+{% capture col1_body %}
+1 Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.
+{% endcapture %}
+{% assign col1_link_text = "Call to action 1" %}
+{% assign col1_link_url = "/" %}
+
+{% assign col2_icon_path = "/assets/svg/bootstrap-icons.svg#cpu-fill" %}
+{% assign col2_title = "Featured title 2" %}
+{% capture col2_body %}
+2 Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.
+{% endcapture %}
+{% assign col2_link_text = "Call to action 2" %}
+{% assign col2_link_url = "/" %}
+
+{% assign col3_icon_path = "/assets/svg/bootstrap-icons.svg#tools" %}
+{% assign col3_title = "Featured title 3" %}
+{% capture col3_body %}
+3 Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.
+{% endcapture %}
+{% assign col3_link_text = "Call to action 3" %}
+{% assign col3_link_url = "/" %}
+
+{% include_relative _includes/_components/columns_icons_hanging.html
+    title=content_title
+
+    col1_icon_path=col1_icon_path
+    col1_title=col1_title
+    col1_body=col1_body
+    col1_link_text=col1_link_text
+    col1_link_url=col1_link_url
+
+    col2_icon_path=col2_icon_path
+    col2_title=col2_title
+    col2_body=col2_body
+    col2_link_text=col2_link_text
+    col2_link_url=col2_link_url
+
+    col3_icon_path=col3_icon_path
+    col3_title=col3_title
+    col3_body=col3_body
+    col3_link_text=col3_link_text
+    col3_link_url=col3_link_url
+%}
+<!-- END Columns Icons Hanging -->
+<hr />
+<!-- BEGIN Columns Image Cards -->
+{% assign content_title = "Columns with Image Cards" %}
+{% assign card_title_align = "Center" %}
+
+{% assign col1_bgimg_path = "/assets/images/unsplash-photo-1.jpg" %}
+{% assign col1_title = "Image card title 1" %}
+
+{% assign col2_bgimg_path = "/assets/images/unsplash-photo-2.jpg" %}
+{% assign col2_title = "Image card title 2" %}
+
+{% assign col3_bgimg_path = "/assets/images/unsplash-photo-3.jpg" %}
+{% assign col3_title = "Image card title 3" %}
+
+{% include_relative _includes/_components/columns_image_cards.html
+    title=content_title
+    card_title_align=card_title_align
+
+    col1_title=col1_title
+    col1_bgimg_path=col1_bgimg_path
+    col1_link_text=col1_link_text
+    col1_link_url=col1_link_url
+
+    col2_title=col2_title
+    col2_bgimg_path=col2_bgimg_path
+    col2_link_text=col2_link_text
+    col2_link_url=col2_link_url
+
+    col3_title=col3_title
+    col3_bgimg_path=col3_bgimg_path
+    col3_link_text=col3_link_text
+    col3_link_url=col3_link_url
+%}
+<!-- END Columns Image Cards -->
+<hr />
+<!-- BEGIN Columns Icons Grid -->
+{% assign content_title = "Columns Icons Grids" %}
+
+{% assign item1_title = "Featured title 1" %}
+{% assign item1_icon_path = "/assets/svg/bootstrap-icons.svg#bootstrap" %}
+{% capture item1_body %}
+1 Paragraph of text beneath the heading to explain the heading.
+{% endcapture %}
+
+{% assign item2_title = "Featured title 2" %}
+{% assign item2_icon_path = "/assets/svg/bootstrap-icons.svg#cpu-fill" %}
+{% capture item2_body %}
+2 Paragraph of text beneath the heading to explain the heading.
+{% endcapture %}
+
+{% assign item3_title = "Featured title 3" %}
+{% assign item3_icon_path = "/assets/svg/bootstrap-icons.svg#calendar3" %}
+{% capture item3_body %}
+3 Paragraph of text beneath the heading to explain the heading.
+{% endcapture %}
+
+{% assign item4_title = "Featured title 4" %}
+{% assign item4_icon_path = "/assets/svg/bootstrap-icons.svg#home" %}
+{% capture item4_body %}
+4 Paragraph of text beneath the heading to explain the heading.
+{% endcapture %}
+
+{% assign item5_title = "Featured title 5" %}
+{% assign item5_icon_path = "/assets/svg/bootstrap-icons.svg#speedometer2" %}
+{% capture item5_body %}
+5 Paragraph of text beneath the heading to explain the heading.
+{% endcapture %}
+
+{% assign item6_title = "Featured title 6" %}
+{% assign item6_icon_path = "/assets/svg/bootstrap-icons.svg#toggles2" %}
+{% capture item6_body %}
+6 Paragraph of text beneath the heading to explain the heading.
+{% endcapture %}
+
+{% assign item7_title = "Featured title 7" %}
+{% assign item7_icon_path = "/assets/svg/bootstrap-icons.svg#geo-fill" %}
+{% capture item7_body %}
+7 Paragraph of text beneath the heading to explain the heading.
+{% endcapture %}
+
+{% assign item8_title = "Featured title 8" %}
+{% assign item8_icon_path = "/assets/svg/bootstrap-icons.svg#tools" %}
+{% capture item8_body %}
+8 Paragraph of text beneath the heading to explain the heading.
+{% endcapture %}
+
+{% include_relative _includes/_components/columns_icons_grid.html
+    title=content_title
+
+    item1_title=item1_title
+    item1_icon_path=item1_icon_path
+    item1_body=item1_body
+
+    item2_title=item2_title
+    item2_icon_path=item2_icon_path
+    item2_body=item2_body
+
+    item3_title=item3_title
+    item3_icon_path=item3_icon_path
+    item3_body=item3_body
+
+    item4_title=item4_title
+    item4_icon_path=item4_icon_path
+    item4_body=item4_body
+
+    item5_title=item5_title
+    item5_icon_path=item5_icon_path
+    item5_body=item5_body
+
+    item6_title=item6_title
+    item6_icon_path=item6_icon_path
+    item6_body=item6_body
+
+    item7_title=item7_title
+    item7_icon_path=item7_icon_path
+    item7_body=item7_body
+
+    item8_title=item8_title
+    item8_icon_path=item8_icon_path
+    item8_body=item8_body
+%}
+<!-- END Columns Icons Grid -->
+<hr />
+<!-- BEGIN Jumbotron Full -->
+{% assign content_title = "Jumbotron Full" %}
+{% capture content_body %}
+Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.
+{% endcapture %}
+
+{% assign primary_link_text = "Primary Button" %}
+{% assign primary_link_url = "/" %}
+
+{% assign secondary_link_text = "Secondary Button" %}
+{% assign secondary_link_url = "/blog" %}
+
+{% include_relative _includes/_components/jumbotron_full.html
+    title=content_title
+    body=content_body
+
+    primary_link_text=primary_link_text
+    primary_link_url=primary_link_url
+
+    secondary_link_text=secondary_link_text
+    secondary_link_url=secondary_link_url
+%}
+<!-- END Jumbotron Full -->
+<hr />
+<!-- BEGIN Jumbotron Split -->
+{% assign left_title = "Left Half-Jumbotron (Dark)" %}
+{% capture left_body %}
+This shows how one of the side-by-side half-jumbotron panels can be styled dark.
+{% endcapture %}
+{% assign left_style_dark = true %}
+{% assign left_link_text = "Example Button" %}
+{% assign left_link_url = "/" %}
+
+{% assign right_title = "Right Half-Jumbotron (Dark)" %}
+{% capture right_body %}
+This shows how one of the side-by-side half-jumbotron panels can be styled light (default).
+{% endcapture %}
+{% assign right_style_dark = false %}
+{% assign right_link_text = "Example Button" %}
+{% assign right_link_url = "/" %}
+
+{% include_relative _includes/_components/jumbotron_split.html
+    left_title=left_title
+    left_body=left_body
+    left_style_dark=left_style_dark
+    left_link_text=left_link_text
+    left_link_url=left_link_url
+
+    right_title=right_title
+    right_body=right_body
+    right_style_dark=right_style_dark
+    right_link_text=right_link_text
+    right_link_url=right_link_url
+%}
+<!-- END Jumbotron Split -->
+<hr />
+<!-- BEGIN Carousel -->
+{% assign carousel_id = "carousel-component" %}
+
+{% assign slide1_alignment = "Left" %}
+{% assign slide1_title = "Example headline." %}
+{% capture slide1_tagline %}
+Some representative placeholder content for the first slide of the carousel.
+{% endcapture %}
+{% assign slide1_link_text = "Sign Up Today" %}
+{% assign slide1_link_url = "/" %}
+{% assign slide1_image_path = "/assets/svg/placeholder-full-gray.svg" %}
+
+{% assign slide2_alignment = "" %}
+{% assign slide2_title = "Another example headline." %}
+{% capture slide2_tagline %}
+Some representative placeholder content for the second slide of the carousel.
+{% endcapture %}
+{% assign slide2_link_text = "Learn More" %}
+{% assign slide2_link_url = "/" %}
+{% assign slide2_image_path = "/assets/svg/placeholder-full-gray.svg" %}
+
+{% assign slide3_alignment = "Right" %}
+{% assign slide3_title = "One more for good measure." %}
+{% capture slide3_tagline %}
+Some representative placeholder content for the third slide of this carousel.
+{% endcapture %}
+{% assign slide3_link_text = "Browse Gallery" %}
+{% assign slide3_link_url = "/" %}
+{% assign slide3_image_path = "/assets/svg/placeholder-full-gray.svg" %}
+
+{% include_relative _includes/_components/carousel.html
+    carousel_id=carousel_id
+
+    slide1_alignment=slide1_alignment
+    slide1_title=slide1_title
+    slide1_tagline=slide1_tagline
+    slide1_link_text=slide1_link_text
+    slide1_link_url=slide1_link_url
+    slide1_image_path=slide1_image_path
+
+    slide2_alignment=slide2_alignment
+    slide2_title=slide2_title
+    slide2_tagline=slide2_tagline
+    slide2_link_text=slide2_link_text
+    slide2_link_url=slide2_link_url
+    slide2_image_path=slide2_image_path
+
+    slide3_alignment=slide3_alignment
+    slide3_title=slide3_title
+    slide3_tagline=slide3_tagline
+    slide3_link_text=slide3_link_text
+    slide3_link_url=slide3_link_url
+    slide3_image_path=slide3_image_path
+%}
+<!-- END Carousel -->
+<hr />
+<!-- BEGIN Featurette Left -->
+{% assign content_title = "Featurette Left." %}
+{% assign content_tagline = "It'll blow your mind." %}
+{% capture content_body %}
+Some great placeholder content for the first featurette here. Imagine some exciting prose here.
+{% endcapture %}
+{% assign image_path = "/assets/svg/placeholder-500-500.svg" %}
+{% assign image_text = "500x500 placeholder" %}
+
+{% include_relative _includes/_components/featurette_left.html
+    title=content_title
+    tagline=content_tagline
+    body=content_body
+
+    primary_link_text=primary_link_text
+    primary_link_url=primary_link_url
+
+    image_path=image_path
+    image_text=image_text
+%}
+<!-- END Featurette Left -->
+<hr />
+<!-- BEGIN Featurette Right -->
+{% assign content_title = "Featurette Right." %}
+{% assign content_tagline = "It'll blow your mind." %}
+{% capture content_body %}
+Some great placeholder content for the first featurette here. Imagine some exciting prose here.
+{% endcapture %}
+{% assign image_path = "/assets/svg/placeholder-500-500.svg" %}
+{% assign image_text = "500x500 placeholder" %}
+
+{% include_relative _includes/_components/featurette_right.html
+    title=content_title
+    tagline=content_tagline
+    body=content_body
+
+    primary_link_text=primary_link_text
+    primary_link_url=primary_link_url
+
+    image_path=image_path
+    image_text=image_text
+%}
+<!-- END Featurette Right -->

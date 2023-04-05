@@ -41,8 +41,6 @@ defaults:
 # Add pages here to explicitly appear in this order in your navigation.
 header_pages:
   - index.md
-  - component-examples.md
-  - blog/index.html
 
 # Specify directories or files to exclude from the build.
 exclude:

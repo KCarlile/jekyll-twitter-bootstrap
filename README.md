@@ -67,6 +67,7 @@ The following layouts are available in the `_layouts/` directory (indentation de
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`post.html` | Single post listing which includes Categories and Tags sidebar includes. (Layout `page_sidebar.html`) |
 | &nbsp;&nbsp;&nbsp;&nbsp;`page.html` | Basic page content with rendered title and body only. (Layout `base.html`) |
 | &nbsp;&nbsp;&nbsp;&nbsp;`page_no_title.html` | Basic page content with rendered body only. (Layout `base.html`) |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`example_components.html` | An example layout with components that shows how to call them and what they look like. (Layout `page_no_title.html`) |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`home.html` | Simply a wrapper for `page_no_title.html` layout as Jekyll's default pages use the `layout: home`. (Layout `page_no_title.html`) |
 
 ### Includes
@@ -89,7 +90,9 @@ The following includes are available in the `_includes/` directory (indentation 
 
 ### Components
 
-Components are pre-built mini-templates to which you can pass values for rendering more advanced page elements. The [Component Examples](/component-examples.html) page shows these and you can discover how to call them in the `component-examples.md` file. The following components are based on the [Twitter Bootstrap examples](https://getbootstrap.com/docs/5.3/examples/) and are available in the `_includes/_components/` directory:
+Components are pre-built mini-templates to which you can pass values for rendering more advanced page elements. The `_layouts/example_components.html` layout shows how to call them. To see these examples, you can specify the `example_components` layout a page's front matter like this: `layout: example_components`
+
+The following components are based on the [Twitter Bootstrap examples](https://getbootstrap.com/docs/5.3/examples/) and are available in the `_includes/_components/` directory:
 
 | `_includes/_components/` Filename | Description |
 | ----------------------- | ----------- |
@@ -116,6 +119,33 @@ The `assets/` directory contains the following content for use in the examples a
 | `images/` | Static images (JPG, GIF, PNG, etc.) used on the site including those for examples and defaults. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`favicons/` | Files used for favicons on the site including those for examples and defaults. |
 | `svg/` | Scalable Vector Graphics (SVGs) used on the site including those for examples and defaults. |
+
+### Blog and Posts
+
+This theme includes layouts and includes for:
+
+| Type | Description | Paginated | Source |
+| ---- | ----------- | --------- | ------ |
+| All posts listing | All blog posts listed in descending chronological order.  | Yes | `blog/index.html |
+| Individual post listing | A single blog post. | No | `_layouts/post.html` |
+| Posts listed by category | All blog posts, grouped by Category, listed in descending chronological order. | No | `categories/index.html`|
+| Posts listed by tag | All blog posts, grouped by Tag, listed in descending chronological order. | No | `tags/index.html`|
+
+All of those layouts ultimately use the `_layouts/page_sidebar.html` with Categories and Tags in the sidebar. To render components in the sidebar, add the name of the `_include/` template to your page's front matter like this:
+
+```yaml
+sidebar:
+  - categories
+  - tags
+```
+
+To leverage this theme's blogging functionality, you'll need to create the following files in your site's structure:
+
+| File | Contents | Purpose |
+| ---- | -------- | ------- |
+| `blog/index.html` | See [`blog/index.html`](https://github.com/KCarlile/jekyll-twitter-bootstrap/blob/main/blog/index.html) | Renders the main blog listing. |
+| `categories/index.html` | See [`categories/index.html`](https://github.com/KCarlile/jekyll-twitter-bootstrap/blob/main/categories/index.html) | Renders the main blog listing by category. |
+| `tags/index.html` | See [`tags/index.html`](https://github.com/KCarlile/jekyll-twitter-bootstrap/blob/main/tags/index.html) | Renders the main blog listing by tag. |
 
 ### Configuration
 
