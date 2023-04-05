@@ -149,11 +149,11 @@ To leverage this theme's blogging functionality, you'll need to create the follo
 
 ### Configuration
 
-The theme's `_config.yml` file contains typical Jekyll theme configuration values as well as some specific to the Jekyll Twitter Bootstrap theme. The `_config.yml` file includes inline comments to explain intent, default values, and usage. Please view the `_config.yml` file for more information regarding site and theme configuration.
+The theme's [`_config.yml`](https://github.com/KCarlile/jekyll-twitter-bootstrap/blob/main/_config.yml) file is well documented and contains typical Jekyll theme configuration values as well as some specific to the Jekyll Twitter Bootstrap theme. The [`_config.yml`](https://github.com/KCarlile/jekyll-twitter-bootstrap/blob/main/_config.yml) file includes inline comments to explain intent, default values, and usage. Please view the [`_config.yml`](https://github.com/KCarlile/jekyll-twitter-bootstrap/blob/main/_config.yml) file for more information regarding site and theme configuration.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/KCarlile/jekyll-twitter-bootstrap. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/KCarlile/jekyll-twitter-bootstrap>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
 
 ## Development
 
