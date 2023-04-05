@@ -62,7 +62,7 @@ The following layouts are available in the `_layouts/` directory (indentation de
 | `_layouts/` Filename | Description |
 | -------------------- | ----------- |
 | `base.html` | Base HTML template for all pages. |
-|  &nbsp;&nbsp;&nbsp;&nbsp;`page_sidebar.html` | Main content template with sidebar with rendered sidebar includes as specified in the page's front matter. (Layout `base.html`) |
+| &nbsp;&nbsp;&nbsp;&nbsp;`page_sidebar.html` | Main content template with sidebar with rendered sidebar includes as specified in the page's front matter. (Layout `base.html`) |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`blog.html` | Paginated listing of blog posts starting with the most recent and includes Categories and Tags sidebar includes. (Layout `page_sidebar.html`) |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`post.html` | Single post listing which includes Categories and Tags sidebar includes. (Layout `page_sidebar.html`) |
 | &nbsp;&nbsp;&nbsp;&nbsp;`page.html` | Basic page content with rendered title and body only. (Layout `base.html`) |

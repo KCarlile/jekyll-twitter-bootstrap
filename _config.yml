@@ -20,7 +20,7 @@ theme: jekyll-twitter-bootstrap
 show_excerpts: true
 # Used in posts for explicitly delimiting excerpt.
 excerpt_separator: <!--more-->
-# Explicitly turn off the old code
+# Configure jekyll-paginate
 paginate: 10
 paginate_path: "/blog/:num"
 # Define the post permalink format.
