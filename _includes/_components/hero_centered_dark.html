@@ -7,7 +7,7 @@
                 {%- if include.primary_link_text or include.secondary_link_text -%}
                     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                         {%- if include.primary_link_text -%}
-                            <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold" onclick="window.location.href='{{ include.primary_link_url }}';">{{ include.primary_link_text }}</button>
+                            <button type="button" class="btn btn-outline-primary btn-lg px-4 me-sm-3 fw-bold" onclick="window.location.href='{{ include.primary_link_url }}';">{{ include.primary_link_text }}</button>
                         {%- endif -%}
                         {%- if include.secondary_link_text -%}
                             <button type="button" class="btn btn-outline-light btn-lg px-4" onclick="window.location.href='{{ include.secondary_link_url }}';">{{ include.secondary_link_text }}</button>
