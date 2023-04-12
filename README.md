@@ -91,7 +91,7 @@ The following includes are available in the `_includes/` directory (indentation 
 
 #### `_includes/posts_latest.html` Usage
 
-You can show excerpts of the _N_ latest posts, sorted by most recent first, by using the `posts_latest.html` include as shown below. Change the value assigned to `posts_count` to alter the number of most recent posts displayed.
+You can show excerpts of the _N_ latest posts, sorted by most recent first, by using the `posts_latest.html` include as shown below. Change the value assigned to `posts_count` to alter the number of most recent posts displayed. Omitting a value for `posts_count` will result in _all_ posts being displayed.
 
 For example, to add the two most recent posts to your home page's markdown, add this below:
 
