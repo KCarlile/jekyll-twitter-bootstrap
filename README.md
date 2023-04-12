@@ -87,6 +87,19 @@ The following includes are available in the `_includes/` directory (indentation 
 | `post_categories.html` | Displays a list of linked post titles by category. |
 | `post_tags.html` | Displays a list of linked post titles by tag. |
 | `tags.html` | Displays linked tags and the post count for each. |
+| `posts_latest.html` | Displays excerpts of the last _N_ posts as specified in the include parameter `posts_count`. See below for usage. |
+
+#### `_includes/posts_latest.html` Usage
+
+You can show excerpts of the _N_ latest posts, sorted by most recent first, by using the `posts_latest.html` include as shown below. Change the value assigned to `posts_count` to alter the number of most recent posts displayed.
+
+For example, to add the two most recent posts to your home page's markdown, add this below:
+
+```markdown
+## Recent Posts
+
+{% include posts_latest.html posts_count=2 %}
+```
 
 ### Components
 
@@ -171,6 +184,38 @@ To add a custom directory to your theme-gem, please edit the regexp in `jekyll-t
 
 - __Q:__ This isn't the only Bootstrap-based theme for Jekyll. What about those other ones?
   - __A:__ At the time of creation, the other Bootstrap-based Jekyll themes didn't have the level of maturity needed or they were based on older versions of Bootstrap.
+
+- __Q:__ If I want my posts to be referred to as _Articles_ (or something else) instead of _Blog_, how can I make that change?
+  - __A:__ There are a few steps necessary to change your post listing name from _Blog_ to something else.
+    - Rename `blog/index.html` to `articles/index.html`
+    - In `articles/index.html`, change the name of the page from "Blog" to "Articles":
+      ```yaml
+      ---
+      # title: Blog
+      title: Articles
+      layout: blog
+      sidebar:
+        - categories
+        - tags
+      ---
+      ...
+      ```
+      The layout can remain named `blog` unless you really want to override and rename the layout.
+    - In your `_config.yml` file, change these lines from `blog` to `article`:
+      ```yaml
+      ...
+      # Add pages here to explicitly appear in this order in your navigation.
+      header_pages:
+        # - blog/index.html
+        - articles/index.html
+      ...
+      # paginate_path: "/blog/:num"
+      paginate_path: "/articles/:num"
+      # Define the post permalink format.
+      #permalink: /blog/:year/:month/:day/:title:output_ext
+      permalink: /articles/:year/:month/:day/:title:output_ext
+      ...
+      ```
 
 ## License
 
