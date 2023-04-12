@@ -1,0 +1,22 @@
+<!-- BEGIN post listings by latest, count -->
+{%- assign date_format = site.jekyll-twitter-bootstrap.date_format | default: "%B %e, %Y at %l:%M%p" -%}
+{% assign posts = site.posts  %}
+{%- if posts.size > 0 -%}
+    <ul class="list-unstyled">
+        {% for post in posts limit:include.posts_count | sort: 'date' | reverse %}
+            <li class="mb-5">
+                <h4 class="fs-5 mb-1"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                <p class="fst-italic lh-sm">{{ post.date | date: date_format }}</p>
+                <div>
+                    {%- if site.show_excerpts -%}
+                        {{ post.excerpt }}
+                    {%- endif -%}
+                </div>
+                <div>
+                    <p><a href="{{ post.url | relative_url }}" class="fst-italic">Continue reading...</a></p>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<!-- END post listings by latest, count -->
