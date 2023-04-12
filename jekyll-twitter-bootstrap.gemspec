@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-twitter-bootstrap"
-  spec.version       = "5.3.0.dev1"
+  spec.version       = "5.3.0.dev3"
   spec.authors       = ["Kenny Carlile"]
   spec.email         = ["kenny@kennycarlile.com"]
 
